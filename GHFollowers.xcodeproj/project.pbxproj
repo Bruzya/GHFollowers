@@ -14,6 +14,7 @@
 		52E5272C2B417A7100E5DF1A /* FavoritesListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5272B2B417A7100E5DF1A /* FavoritesListVC.swift */; };
 		52E5272E2B417FD400E5DF1A /* GFButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5272D2B417FD400E5DF1A /* GFButton.swift */; };
 		52E527302B41829700E5DF1A /* GFTextField.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E5272F2B41829700E5DF1A /* GFTextField.swift */; };
+		52E527322B41A4DE00E5DF1A /* FollowersListVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E527312B41A4DE00E5DF1A /* FollowersListVC.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +27,7 @@
 		52E5272B2B417A7100E5DF1A /* FavoritesListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FavoritesListVC.swift; sourceTree = "<group>"; };
 		52E5272D2B417FD400E5DF1A /* GFButton.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFButton.swift; sourceTree = "<group>"; };
 		52E5272F2B41829700E5DF1A /* GFTextField.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFTextField.swift; sourceTree = "<group>"; };
+		52E527312B41A4DE00E5DF1A /* FollowersListVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FollowersListVC.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 				52E527222B41744400E5DF1A /* Info.plist */,
 				52E5272B2B417A7100E5DF1A /* FavoritesListVC.swift */,
 				52E527292B417A4500E5DF1A /* SearchVC.swift */,
+				52E527312B41A4DE00E5DF1A /* FollowersListVC.swift */,
 			);
 			path = GHFollowers;
 			sourceTree = "<group>";
@@ -140,6 +143,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				52E527302B41829700E5DF1A /* GFTextField.swift in Sources */,
+				52E527322B41A4DE00E5DF1A /* FollowersListVC.swift in Sources */,
 				52E5272C2B417A7100E5DF1A /* FavoritesListVC.swift in Sources */,
 				52E5272E2B417FD400E5DF1A /* GFButton.swift in Sources */,
 				52E5272A2B417A4500E5DF1A /* SearchVC.swift in Sources */,
