@@ -12,11 +12,16 @@ class FollowersListVC: UIViewController {
     var username: String!
     
     
+    //MARK: - Lifecycle
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.isNavigationBarHidden = false
+    }
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
         view.backgroundColor = .systemBackground
-        navigationController?.isNavigationBarHidden = false
         navigationController?.navigationBar.prefersLargeTitles = true
         
         
