@@ -68,21 +68,53 @@
 		52E527132B41744300E5DF1A /* GHFollowers */ = {
 			isa = PBXGroup;
 			children = (
-				52E527142B41744300E5DF1A /* AppDelegate.swift */,
-				52E527162B41744300E5DF1A /* SceneDelegate.swift */,
-				52E5272D2B417FD400E5DF1A /* GFButton.swift */,
-				52E5272F2B41829700E5DF1A /* GFTextField.swift */,
-				52E5271D2B41744400E5DF1A /* Assets.xcassets */,
-				52E527222B41744400E5DF1A /* Info.plist */,
-				52E5272B2B417A7100E5DF1A /* FavoritesListVC.swift */,
-				52E527292B417A4500E5DF1A /* SearchVC.swift */,
-				52E527332B41B78200E5DF1A /* GFTitleLabel.swift */,
-				52E527352B41B8DF00E5DF1A /* GFBodyLabel.swift */,
-				52E527372B41B99600E5DF1A /* GFAlertVC.swift */,
-				52E527392B41BF7E00E5DF1A /* UIViewController + ext.swift */,
-				52E527312B41A4DE00E5DF1A /* FollowersListVC.swift */,
+				52E5273D2B41C29C00E5DF1A /* Extensions */,
+				52E5273C2B41C24100E5DF1A /* CustomViews */,
+				52E5273B2B41C20900E5DF1A /* Screens */,
+				52E5273E2B41C30500E5DF1A /* Support */,
 			);
 			path = GHFollowers;
+			sourceTree = "<group>";
+		};
+		52E5273B2B41C20900E5DF1A /* Screens */ = {
+			isa = PBXGroup;
+			children = (
+				52E527292B417A4500E5DF1A /* SearchVC.swift */,
+				52E5272B2B417A7100E5DF1A /* FavoritesListVC.swift */,
+				52E527312B41A4DE00E5DF1A /* FollowersListVC.swift */,
+			);
+			path = Screens;
+			sourceTree = "<group>";
+		};
+		52E5273C2B41C24100E5DF1A /* CustomViews */ = {
+			isa = PBXGroup;
+			children = (
+				52E527372B41B99600E5DF1A /* GFAlertVC.swift */,
+				52E5272F2B41829700E5DF1A /* GFTextField.swift */,
+				52E5272D2B417FD400E5DF1A /* GFButton.swift */,
+				52E527332B41B78200E5DF1A /* GFTitleLabel.swift */,
+				52E527352B41B8DF00E5DF1A /* GFBodyLabel.swift */,
+			);
+			path = CustomViews;
+			sourceTree = "<group>";
+		};
+		52E5273D2B41C29C00E5DF1A /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				52E527392B41BF7E00E5DF1A /* UIViewController + ext.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
+		52E5273E2B41C30500E5DF1A /* Support */ = {
+			isa = PBXGroup;
+			children = (
+				52E527142B41744300E5DF1A /* AppDelegate.swift */,
+				52E527162B41744300E5DF1A /* SceneDelegate.swift */,
+				52E5271D2B41744400E5DF1A /* Assets.xcassets */,
+				52E527222B41744400E5DF1A /* Info.plist */,
+			);
+			path = Support;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -299,7 +331,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6P3D789X98;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GHFollowers/Info.plist;
+				INFOPLIST_FILE = GHFollowers/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
@@ -329,7 +361,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = 6P3D789X98;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = GHFollowers/Info.plist;
+				INFOPLIST_FILE = GHFollowers/Support/Info.plist;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
 				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
