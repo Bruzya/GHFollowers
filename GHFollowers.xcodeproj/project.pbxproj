@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		52DDB3552B4316B500C00227 /* UIHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDB3542B4316B500C00227 /* UIHelper.swift */; };
 		52DDB35D2B4723DA00C00227 /* GFEmpteStateView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDB35C2B4723DA00C00227 /* GFEmpteStateView.swift */; };
+		52DDB35F2B4845B400C00227 /* UserInfoVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52DDB35E2B4845B400C00227 /* UserInfoVC.swift */; };
 		52E527152B41744300E5DF1A /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E527142B41744300E5DF1A /* AppDelegate.swift */; };
 		52E527172B41744300E5DF1A /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 52E527162B41744300E5DF1A /* SceneDelegate.swift */; };
 		52E5271E2B41744400E5DF1A /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 52E5271D2B41744400E5DF1A /* Assets.xcassets */; };
@@ -32,6 +33,7 @@
 /* Begin PBXFileReference section */
 		52DDB3542B4316B500C00227 /* UIHelper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIHelper.swift; sourceTree = "<group>"; };
 		52DDB35C2B4723DA00C00227 /* GFEmpteStateView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GFEmpteStateView.swift; sourceTree = "<group>"; };
+		52DDB35E2B4845B400C00227 /* UserInfoVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserInfoVC.swift; sourceTree = "<group>"; };
 		52E527112B41744300E5DF1A /* GHFollowers.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GHFollowers.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		52E527142B41744300E5DF1A /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		52E527162B41744300E5DF1A /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -150,6 +152,7 @@
 				52E527292B417A4500E5DF1A /* SearchVC.swift */,
 				52E5272B2B417A7100E5DF1A /* FavoritesListVC.swift */,
 				52E527312B41A4DE00E5DF1A /* FollowersListVC.swift */,
+				52DDB35E2B4845B400C00227 /* UserInfoVC.swift */,
 			);
 			path = Screens;
 			sourceTree = "<group>";
@@ -309,6 +312,7 @@
 				52E5272A2B417A4500E5DF1A /* SearchVC.swift in Sources */,
 				52E527152B41744300E5DF1A /* AppDelegate.swift in Sources */,
 				52E527172B41744300E5DF1A /* SceneDelegate.swift in Sources */,
+				52DDB35F2B4845B400C00227 /* UserInfoVC.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

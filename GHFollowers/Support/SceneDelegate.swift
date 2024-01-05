@@ -55,7 +55,8 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     
     func configureNavigationBar() {
         UINavigationBar.appearance().tintColor = .systemGreen
+        let navbarAppearance = UINavigationBarAppearance()
+        navbarAppearance.configureWithDefaultBackground()
+        UINavigationBar.appearance().scrollEdgeAppearance = navbarAppearance
     }
-    
-    
 }
