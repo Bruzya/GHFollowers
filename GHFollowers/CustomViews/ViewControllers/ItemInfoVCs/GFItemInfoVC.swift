@@ -20,6 +20,7 @@ class GFItemInfoVC: UIViewController {
     //MARK: - Properties
     
     var user: User!
+    weak var delegate: UserInfoVCDelegate!
 
 
     //MARK: - Lifecycle
@@ -36,11 +37,21 @@ class GFItemInfoVC: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureActionButton()
         configureBackgroundView()
         configureStackView()
         layoutUI()
     }
     
+    
+    //MARK: - Actions
+    
+    private func configureActionButton() {
+        actionButton.addTarget(self, action: #selector(actionButtonTapped), for: .touchUpInside)
+    }
+    
+    @objc func actionButtonTapped() {}
+
     
     //MARK: - Methods
     
