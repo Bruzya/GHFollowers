@@ -17,7 +17,9 @@ class FollowersListVC: UIViewController {
         case main
     }
     
+    
     //MARK: - Properties
+    
     var username: String!
     var followers: [Follower] = []
     var filteredFollowers: [Follower] = []
@@ -30,6 +32,7 @@ class FollowersListVC: UIViewController {
     
     
     //MARK: - Lifecycle
+    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
         navigationController?.setNavigationBarHidden(false, animated: true)
@@ -48,6 +51,9 @@ class FollowersListVC: UIViewController {
     func configureViewController() {
         view.backgroundColor = .systemBackground
         navigationController?.navigationBar.prefersLargeTitles = true
+        
+        let addButton = UIBarButtonItem(barButtonSystemItem: .add, target: self, action: #selector(addButtonTapped))
+        navigationItem.rightBarButtonItem = addButton
     }
     
     func configureSearchController() {
@@ -110,6 +116,10 @@ class FollowersListVC: UIViewController {
                 self.presentGFAlertOnMainThread(title: "Bad stuff happened", message: error.rawValue, buttonTitle: "Ok")
             }
         }
+    }
+    
+    @objc func addButtonTapped() {
+        
     }
 }
 
