@@ -7,7 +7,9 @@
 
 import UIKit
 
-class GFRepoItemVC: GFItemInfoVC {
+final class GFRepoItemVC: GFItemInfoVC {
+    
+    //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,13 +17,19 @@ class GFRepoItemVC: GFItemInfoVC {
         configureItems()
     }
     
+    
+    //MARK: - Action
+    
+    override func actionButtonTapped() {
+        delegate.didTapGitHubProfile(for: user)
+    }
+    
+    
+    //MARK: - Private Methods
+    
     private func configureItems() {
         itemInfoViewOne.set(itemInfoType: .repos, withCount: user.publicRepos)
         itemInfoViewTwo.set(itemInfoType: .gists, withCount: user.publicGists)
         actionButton.set(backgroundColor: .systemPurple, title: "Github Profile")
-    }
-    
-    override func actionButtonTapped() {
-        delegate.didTapGitHubProfile(for: user)
     }
 }

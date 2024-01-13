@@ -7,11 +7,20 @@
 
 import UIKit
 
-class FollowerCell: UICollectionViewCell {
-    static let reuseID = "FollowerCell"
-    
+final class FollowerCell: UICollectionViewCell {
+
+    //MARK: - UI Elements
+
     let avatarImageView = GFAvatarImageView(frame: .zero)
     let usernameLabel = GFTitleLabel(textAlignment: .center, fontSize: 16)
+
+    
+    //MARK: - Properties
+    
+    static let reuseID = "FollowerCell"
+    
+
+    //MARK: - Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -19,14 +28,26 @@ class FollowerCell: UICollectionViewCell {
         configure()
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
+    
+    //MARK: - Public Methods
+    
     func set(follower: Follower) {
         usernameLabel.text = follower.login
-        avatarImageView.downloadImage(from: follower.avatarUrl)
+        NetworkManager.shared.downloadImage(from: follower.avatarUrl) { [weak self] image in
+            guard let self else { return }
+            DispatchQueue.main.async {
+                self.avatarImageView.image = image
+            }
+        }
     }
+    
+    
+    //MARK: - Private Methods
     
     private func configure() {
         addSubview(avatarImageView)

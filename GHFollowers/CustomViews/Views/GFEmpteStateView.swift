@@ -7,10 +7,15 @@
 
 import UIKit
 
-class GFEmpteStateView: UIView {
+final class GFEmpteStateView: UIView {
 
+    //MARK: - UI Elements
+    
     let messageLabel = GFTitleLabel(textAlignment: .center, fontSize: 28)
     let logoImageView = UIImageView()
+    
+    
+    //MARK: - Lifecycle
     
     override init(frame: CGRect) {
         super.init(frame: frame)
@@ -18,16 +23,18 @@ class GFEmpteStateView: UIView {
         configure()
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
-    init(message: String) {
-        super.init(frame: .zero)
-        
+
+    convenience init(message: String) {
+        self.init(frame: .zero)
         messageLabel.text = message
-        configure()
     }
+
+    //MARK: - Private Methods
     
     private func configure() {
         addSubview(messageLabel)

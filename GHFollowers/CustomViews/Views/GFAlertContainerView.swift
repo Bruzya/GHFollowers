@@ -1,19 +1,14 @@
 //
-//  GFAvatarImageView.swift
+//  GFAlertContainerView.swift
 //  GHFollowers
 //
-//  Created by Evgenii Mazrukho on 01.01.2024.
+//  Created by Evgenii Mazrukho on 13.01.2024.
 //
 
 import UIKit
 
-final class GFAvatarImageView: UIImageView {
+class GFAlertContainerView: UIView {
 
-    //MARK: - Properties
-    
-    let placeholderImage = UIImage(named: "avatar-placeholder")
-
-    
     //MARK: - Lifecycle
     
     override init(frame: CGRect) {
@@ -21,7 +16,6 @@ final class GFAvatarImageView: UIImageView {
         
         configure()
     }
-    
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
@@ -31,9 +25,11 @@ final class GFAvatarImageView: UIImageView {
     //MARK: - Private Methods
     
     private func configure() {
-        layer.cornerRadius = 10
-        clipsToBounds = true
-        image = placeholderImage
+        
+        backgroundColor = .systemBackground
+        layer.cornerRadius = 16
+        layer.borderWidth = 2
+        layer.borderColor = UIColor.white.cgColor
         translatesAutoresizingMaskIntoConstraints = false
     }
 }

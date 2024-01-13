@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFUserInfoHeaderVC: UIViewController {
+final class GFUserInfoHeaderVC: UIViewController {
 
     //MARK: - UI
     
@@ -17,6 +17,7 @@ class GFUserInfoHeaderVC: UIViewController {
     let locationImageView = UIImageView()
     let locationLabel = GFSecondaryTitleLabel(fontSize: 18)
     let bioLabel = GFBodyLabel(textAlignment: .left)
+    
     
     //MARK: - Properties
     
@@ -30,9 +31,11 @@ class GFUserInfoHeaderVC: UIViewController {
         self.user = user
     }
     
+    
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -42,10 +45,11 @@ class GFUserInfoHeaderVC: UIViewController {
         configureUI()
     }
     
-    //MARK: - Methods
     
-    func configureUI() {
-        avatarImageView.downloadImage(from: user.avatarUrl)
+    //MARK: - Private Methods
+    
+    private func configureUI() {
+        downloadAvatarImage()
         usernameLabel.text = user.login
         nameLabel.text = user.name ?? ""
         locationLabel.text = user.location ?? "No location"
@@ -56,7 +60,18 @@ class GFUserInfoHeaderVC: UIViewController {
         locationImageView.tintColor = .secondaryLabel
     }
     
-    func addSubviews() {
+    
+    private func downloadAvatarImage() {
+        NetworkManager.shared.downloadImage(from: user.avatarUrl) { [weak self] image in
+            guard let self else { return }
+            DispatchQueue.main.async {
+                self.avatarImageView.image = image
+            }
+        }
+    }
+    
+    
+    private func addSubviews() {
         view.addSubview(avatarImageView)
         view.addSubview(usernameLabel)
         view.addSubview(nameLabel)
@@ -65,7 +80,8 @@ class GFUserInfoHeaderVC: UIViewController {
         view.addSubview(bioLabel)
     }
     
-    func layoutUI() {
+    
+    private func layoutUI() {
         let padding: CGFloat = 20
         let textImagePadding: CGFloat = 12
         locationImageView.translatesAutoresizingMaskIntoConstraints = false

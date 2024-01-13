@@ -7,7 +7,9 @@
 
 import UIKit
 
-class GFFollowerItemVC: GFItemInfoVC {
+final class GFFollowerItemVC: GFItemInfoVC {
+    
+    //MARK: - Lifecycle
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -15,13 +17,18 @@ class GFFollowerItemVC: GFItemInfoVC {
         configureItems()
     }
     
+    
+    //MARK: - Action
+    
+    override func actionButtonTapped() {
+        delegate.didTapGetFollowers(for: user)
+    }
+
+    //MARK: - Private Methods
+    
     private func configureItems() {
         itemInfoViewOne.set(itemInfoType: .followers, withCount: user.followers)
         itemInfoViewTwo.set(itemInfoType: .following, withCount: user.following)
         actionButton.set(backgroundColor: .systemGreen, title: "Get Followers")
-    }
-    
-    override func actionButtonTapped() {
-        delegate.didTapGetFollowers(for: user)
     }
 }

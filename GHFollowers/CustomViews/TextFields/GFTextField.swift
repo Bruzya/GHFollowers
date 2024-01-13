@@ -7,7 +7,7 @@
 
 import UIKit
 
-class GFTextField: UITextField {
+final class GFTextField: UITextField {
 
     //MARK: - Lifecycle
     

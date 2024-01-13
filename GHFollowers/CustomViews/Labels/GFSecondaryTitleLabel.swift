@@ -7,23 +7,29 @@
 
 import UIKit
 
-class GFSecondaryTitleLabel: UILabel {
+final class GFSecondaryTitleLabel: UILabel {
 
+    //MARK: - Lifecycle
+    
     override init(frame: CGRect) {
         super.init(frame: frame)
+    
         configure()
     }
     
-    init(fontSize: CGFloat) {
-        super.init(frame: .zero)
-
+    
+    convenience init(fontSize: CGFloat) {
+        self.init(frame: .zero)
         font = UIFont.systemFont(ofSize: fontSize, weight: .medium)
-        configure()
     }
+
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    
+    
+    //MARK: - Private Methods
     
     private func configure() {
         textColor = .secondaryLabel
