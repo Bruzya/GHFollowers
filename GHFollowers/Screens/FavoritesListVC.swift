@@ -7,7 +7,7 @@
 
 import UIKit
 
-class FavoritesListVC: UIViewController {
+final class FavoritesListVC: GFDataLoadingVC {
 
     //MARK: - UI elements
     
