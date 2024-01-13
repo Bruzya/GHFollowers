@@ -11,8 +11,7 @@ final class GFAvatarImageView: UIImageView {
 
     //MARK: - Properties
     
-    let placeholderImage = UIImage(named: "avatar-placeholder")
-
+    let placeholderImage = Images.placeholder
     
     //MARK: - Lifecycle
     
