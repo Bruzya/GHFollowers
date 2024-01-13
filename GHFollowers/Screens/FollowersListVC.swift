@@ -7,12 +7,6 @@
 
 import UIKit
 
-//MARK: - FollowerListVCDelegate
-
-protocol FollowerListVCDelegate: AnyObject {
-    func didRequestFollowers(for username: String)
-}
-
 final class FollowersListVC: GFDataLoadingVC {
 
     //MARK: - Section for CollectionView
@@ -22,6 +16,11 @@ final class FollowersListVC: GFDataLoadingVC {
     }
     
     
+    //MARK: - UI Elements
+
+    var collectionView: UICollectionView!
+
+
     //MARK: - Properties
     
     var username: String!
@@ -32,7 +31,6 @@ final class FollowersListVC: GFDataLoadingVC {
     var isSearching = false
     var isLoadingMoreFollowers = false
     
-    var collectionView: UICollectionView!
     var dataSource: UICollectionViewDiffableDataSource<Section, Follower>!
     
     
@@ -224,9 +222,9 @@ extension FollowersListVC: UISearchResultsUpdating {
 }
 
 
-//MARK: - FollowerListVCDelegate
+//MARK: - UserInfoVCDelegate
 
-extension FollowersListVC: FollowerListVCDelegate {
+extension FollowersListVC: UserInfoVCDelegate {
     func didRequestFollowers(for username: String) {
         self.username = username
         title = username

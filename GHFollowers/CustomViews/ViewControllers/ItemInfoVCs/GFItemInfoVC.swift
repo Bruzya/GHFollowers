@@ -20,7 +20,6 @@ class GFItemInfoVC: UIViewController {
     //MARK: - Properties
     
     var user: User!
-    weak var delegate: UserInfoVCDelegate!
 
 
     //MARK: - Lifecycle
@@ -75,8 +74,7 @@ class GFItemInfoVC: UIViewController {
     
     
     private func layoutUI() {
-        view.addSubview(stackView)
-        view.addSubview(actionButton)
+        view.addSubviews(stackView, actionButton)
         
         let padding: CGFloat = 20
         
